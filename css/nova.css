@@ -1,0 +1,380 @@
+.counter {
+	margin: -15px 0 30px;
+	font-size: 16px;
+	font-style: italic;
+}
+	
+.has-fixed .header-main {
+	top: 0;
+}
+
+#ant-modal {
+	z-index: 100000;
+	position: absolute;
+}
+
+#root {
+	position: relative;
+	padding-bottom: 50px;
+}
+
+#root .btn.btn-md {
+	font-size: 18px !important;
+	padding: 15px 45px !important;   
+	white-space: break-spaces;
+}
+
+#root .btn.btn-md[disabled] {
+	font-size: 12px !important;
+	max-width: 80%;
+	overflow: hidden;
+}
+
+.ant-layout {
+	background: transparent;
+}
+
+.ant-layout-header {
+	background: transparent !important;
+}
+
+#root main {
+	background: transparent !important;
+	padding: 0 !important;
+	text-align: center;
+}
+
+.App-Bar {
+	height: auto !important;
+	padding-top: 0 !important;
+	position: absolute !important;
+	bottom: 0 !important;
+	height: 40px !important;
+	padding: 0 !important;
+	top: auto !important;
+}
+
+.App-Bar-right > .ant-btn.ant-btn-primary.ant-btn-lg {
+	background: transparent !important;
+	border: none !important;
+	font-size: 14px !important;
+	box-shadow: none !important;
+}
+
+.ant-btn > span {
+	vertical-align: middle;
+}
+
+.App-Bar-right {
+	margin: 0 auto;
+}
+
+#root main .ant-btn-primary {
+	margin: 0 auto;
+	display: block;
+	white-space: break-spaces;
+	height: auto;
+}
+
+.modal-header {
+	background: #1a2029;
+	border-bottom: 0;
+}
+
+.modal-header .modal-title {
+	margin: 0 auto;
+	color: #FFF;
+}
+
+.ant-select-dropdown {
+	z-index: 100000 !important;
+}
+
+.header-navbar-s1 .menu > .menu-item > a {
+	padding: 20px 15px !important;
+	font-size: 14px !important;
+}
+	
+#root main .counter {
+	color: #FFF;
+	display: none;
+}
+
+div.eapps-widget {
+	position: fixed;
+	z-index: 100;
+}
+
+.eapps-social-share-buttons {
+	position: fixed !important;
+	z-index: 100 !important;
+}
+
+#root .buy, #root .text, #root #nova, #root .app-title {
+	display: none !important;
+}
+
+#mint-box.not-connected #root {
+	padding-bottom: 15px;    
+}
+
+#mint-box.not-connected .App-Bar {
+	display: none;
+}
+
+#mint-guide {
+	display: none;
+}
+
+#mint-box.not-connected #mint-guide {
+	display: block;
+}
+
+#modal-mint-guide .modal-body {
+	background: rgb(18,8,29);
+	background: linear-gradient(333deg, rgba(18,8,29,1) 0%, rgba(15,3,59,1) 100%);
+	border: 1px solid rgba(255,255,255,0.1);
+}
+
+@media only screen and (max-width: 768px) {
+	#modal-mint-guide h5 {
+		font-size: 16px;
+	}
+	
+	#modal-mint-guide .circle {
+		width: 48px;
+		float: left;
+		margin-bottom: 15px;
+	}
+	
+	#iframe-widget-wrapper {
+		height: 390px !important;
+	}
+}
+
+.circle {
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	width: 100%;
+	position: relative;
+	background-color: #FFF;
+}
+
+.circle:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.circle-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+}
+	
+.score-text {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 1em;
+	line-height: 1em;
+	font-size: 32px;
+}
+
+#live-mint-feed {
+	white-space: nowrap;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	height: 300px;
+}
+
+#live-mint-feed .slide {
+	width: 200px;
+	display: inline-block;
+	text-align: center;
+	margin-right: 15px;
+}
+		
+#live-mint-feed .slide .image {
+	display: block;
+	width: 100%;
+	background: #eaf3fc url('https://novalaunch.art/nova/loading.gif') no-repeat center center;
+	display: block;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-block: 15px;
+	position: relative;
+	box-shadow: 0 3px 8px 0 rgb(0 0 0 / 15%);
+}
+
+#live-mint-feed .slide .image:after {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+#live-mint-feed .slide img {
+	max-width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+#live-mint-feed .slide .name {
+	font-size: 18px;
+}
+
+#live-mint-feed .slide .minted {
+	display: block;
+	font-size: 14px;
+}
+
+.nova-power {
+	text-align: center;
+	font-size: 12px;
+	color: rgba(255,255,255,0.8);
+	text-shadow: 0 1px 3px rgb(0 0 0 / 60%);
+	margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	#header .logo img {
+		max-width: 100% !important;
+		height: auto !important;
+		max-height: 60px;
+	}
+	#header .header-logo {
+		max-width: calc(100% - 60px);
+	}
+	
+	nova-header.menu-shown {
+		position: fixed;
+		background: rgba(0,0,0,0.9);
+		top: 0;
+		width: 100%;
+		left: 0;
+	}
+}
+
+#header-main-btn.connected {
+	padding-left: 38px;
+}
+
+#header-main-btn.connected .icon {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	left: 10px;
+	background-size: contain;
+}
+
+.icon.phantom {
+	background: url("https://novalaunch.art/assets/images/phantom-icon.png") no-repeat center center;
+}
+
+.icon.ledger {
+	background: url("https://novalaunch.art/assets/images/ledger-icon.png") no-repeat center center;
+}
+
+.icon.solflare {
+	background: url("https://novalaunch.art/assets/images/solflare-icon.png") no-repeat center center;
+}
+
+.icon.slope {
+	background: url("https://novalaunch.art/assets/images/slope-icon.png") no-repeat center center;
+}
+
+.icon.sollet {
+	background: url("https://novalaunch.art/assets/images/sollet-icon.png") no-repeat center center;
+}
+
+#header-main-btn.connected .wallet-content {
+	text-align: left;
+	line-height: 16px;
+}
+
+#header-main-btn.connected .balance {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+#header-main-btn.connected .address {
+	font-size: 10px;
+	color: rgba(255,255,255,0.75);
+	font-weight: 400;
+}
+
+reach-portal {
+	z-index: 10000;
+	position: fixed;
+}
+
+#nova-wallet-info {
+	display: none;
+}
+
+#nova-mint-container {
+	position: relative;
+}
+
+#nova-mint.connected #nova-mint-container {
+	padding-bottom: 50px;
+}
+
+#nova-disconnect-wallet-button {
+	position: absolute;
+	background: transparent;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	border: 1px dashed rgba(255,255,255,0.15);
+	font-size: 14px;
+	border-radius: 60px;
+	padding: 2px 15px;
+	color: rgba(255,255,255,0.4);
+	white-space: nowrap;
+}
+
+#nova-disconnect-wallet-button:hover {
+	color: #FFF;
+	border: 1px solid rgba(255,255,255,0.5);
+}
+
+#nova-connect-wallet-button {
+	display: inline-block;
+	height: auto;
+}
+
+#nova-connect-wallet-button span {
+	display: inline;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+#nova-action-button {
+	display: inline-block;
+	white-space: break-spaces;
+}
+
+#nova-mint-transaction {
+	font-size: 14px;
+	margin: 10px 0 0;
+}
+
+#mint-box.not-connected #mint-guide {
+	margin-top: 20px;
+}
+
+#mint-box > .token-status {
+	max-height: none !important;
+	max-width: none !important;	
+}

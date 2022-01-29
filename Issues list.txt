@@ -1,0 +1,27 @@
+Total 3 issues:
+	#1 issue:
+	At Frequently Asked Question(FAQs) there are no arrows to expand.
+	#2 issue:
+        This is also in FAQs section. The problem here is I can't click on About NFT.
+	#3 issue:
+	At the Stay up to date with our project at the bottom. The links are not clickable.
+Questions:
+	#1: Can you help me with the discord bots?
+	#2: What does WAGMI mean?
+Alert: Please accept the invite to edit crazycows.art repo. You are allowed to add people. Make sure to commit to private Github repo! I update code daily at the private Github repo. 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+

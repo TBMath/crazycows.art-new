@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Nova Launch - Solana NFT Devs">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/7dd56eaf20.js" crossorigin="anonymous"></script>
+    <meta name="description"
+        content="A collection of 8888 algorithmically created Cows that sweep floors and open doors. Our collection is based on the idea of a community fund that would be used to buy Blue Chip NFTs or Sweep floors of new collections. All decisions of how the money is used in the community fund are made by holders of CrazyCows.  ">
+
+    <link rel="shortcut icon" href="images/cool.png">
+
+    <link rel="manifest" href="asset-manifest.json" />
+
+    <title>Crazy Cows</title>
+
+    <meta property="og:title" content="Crazy Cows">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/cool.png">
+    <meta property="og:url" content="https://CrazyCows.art">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta property="og:description"
+        content="A collection of 8888 algorithmically created Cows that sweep floors and open doors. Our collection is based on the idea of a community fund that would be used to buy Blue Chip NFTs or Sweep floors of new collections. All decisions of how the money is used in the community fund are made by holders of CrazyCows.  ">
+    <meta property="og:site_name" content="Crazy Cows">
+    <meta name="twitter:image:alt"
+        content="A collection of 8888 algorithmically created Cows that sweep floors and open doors. Our collection is based on the idea of a community fund that would be used to buy Blue Chip NFTs or Sweep floors of new collections. All decisions of how the money is used in the community fund are made by holders of CrazyCows.  ">
+
+    <link rel="stylesheet" href="css/vendor.bundle.css?ver=1930">
+    <link rel="stylesheet" href="css/style-dark.css?ver=1930" id="changeTheme">
+
+    <link rel="stylesheet" href="css/nova.css" />
+    <link href="css/main.chunk.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/theme.css?ver=1930">
+    <style>
+        .tc-base-white,
+        .tc-light,
+        .tc-light a:not(.btn):not([class*="link-"]) {
+            color: #eff6ff;
+        }
+
+        .tc-base-white-hover,
+        .tc-light a:not(.btn):not([class*="link-"]):hover {
+            color: #46bdf4;
+        }
+
+        .tc-default,
+        .tc-default a {
+            color: #28384c !important;
+        }
+
+        .tc-alternet,
+        .tc-alternet a {
+            color: #28384c !important;
+        }
+
+        .tc-primary,
+        .tc-primary a {
+            color: #46bdf4 !important;
+        }
+
+        .tc-primary a:hover {
+            color: #2b56f5 !important;
+        }
+
+        .tc-secondary,
+        .tc-secondary a {
+            color: #2b56f5 !important;
+        }
+
+        .tc-secondary a:hover {
+            color: #46bdf4 !important;
+        }
+
+        .tc-info,
+        .tc-info a {
+            color: #026bfb !important;
+        }
+
+        .tc-warning,
+        .tc-warning a {
+            color: #f6be26 !important;
+        }
+
+        .tc-success,
+        .tc-success a {
+            color: #39d884 !important;
+        }
+
+        .tc-danger,
+        .tc-danger a {
+            color: #e6604a !important;
+        }
+
+        .tc-light p,
+        .tc-light .list {
+            color: #a2b4d2;
+        }
+
+        .tc-light .lead,
+        .tc-light .lead-light,
+        .tc-light .lead-s2 {
+            color: #fff;
+        }
+
+        .tc-light-alt a:not(.btn):not([class*="link-"]) {
+            color: #a2b4d2 !important;
+        }
+
+        .tc-light-alt a:not(.btn):not([class*="link-"]):hover {
+            color: #46bdf4 !important;
+        }
+
+        .tc-light-alt li {
+            color: #a2b4d2;
+        }
+
+        .tc-lighter {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        .tc-dark,
+        .tc-dark a {
+            color: #0b0c10 !important;
+        }
+
+        .tc-theme,
+        .tc-theme a {
+            color: #46bdf4 !important;
+        }
+
+        .tc-theme-alt,
+        .tc-theme-alt a {
+            color: #0b0c22 !important;
+        }
+
+        .tc-white {
+            color: #fff !important;
+        }
+
+        .bg-default {
+            background-color: #28384c !important;
+        }
+
+        .bg-alternet {
+            background-color: #0b0c22 !important;
+        }
+
+        .bg-primary {
+            background-color: #46bdf4 !important;
+        }
+
+        .bg-secondary {
+            background-color: #2b56f5 !important;
+        }
+
+        .bg-light {
+            background-color: #eff6ff !important;
+        }
+
+        .bg-light.current {
+            background-color: rgba(239, 246, 255, 0.7) !important;
+        }
+
+        .bg-light-alt {
+            background-color: #dfeaf9 !important;
+        }
+
+        .bg-light-alt.current {
+            background-color: rgba(223, 234, 249, 0.7) !important;
+        }
+
+        .bg-light-grad {
+            background-image: linear-gradient(to bottom, #fff 0%, #eff6ff 100%);
+        }
+
+        .bg-dark {
+            background-color: #08091b !important;
+        }
+
+        .bg-dark.current {
+            background-color: rgba(8, 9, 27, 0.7) !important;
+        }
+
+        .bg-dark-alt {
+            background-color: rgba(8, 9, 27, 0.7) !important;
+        }
+
+        .bg-dark-alt.current {
+            background-color: rgba(11, 12, 34, 0.7) !important;
+        }
+
+        .bg-dark-opacity {
+            background: rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .bg-trans {
+            background-color: transparent !important;
+        }
+
+        .bg-grad {
+            background-image: linear-gradient(90deg, #46bdf4 0%, #2b56f5 100%) !important;
+        }
+
+        .bg-grad-alt {
+            background-image: linear-gradient(90deg, #2b56f5 0%, #46bdf4 100%) !important;
+        }
+
+        .bg-grad-special {
+            background-image: linear-gradient(140deg, #7a0fff 0%, #7a0fff 20%, transparent 50%, transparent 100%) !important;
+        }
+
+        .bg-grad-special-alt {
+            background-image: linear-gradient(to top, #10122d 0%, #10122d 5%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        .bg-grad-vr-theme-to-alt {
+            background-image: linear-gradient(to bottom, #0b0c22 0%, #10122d 100%) !important;
+        }
+
+        .bg-grad-vr-theme-dark-to-dark-alt {
+            background-image: linear-gradient(to bottom, #08091b 0%, #0b0c22 100%) !important;
+        }
+
+        .bg-grad-vr-alt-to-theme {
+            background-image: linear-gradient(to top, #0b0c22 0%, #10122d 100%) !important;
+        }
+
+        .bg-grad-vr-dark-alt-to-theme-dark-to-theme {
+            background-image: linear-gradient(to top, #08091b 0%, #0b0c22 100%) !important;
+        }
+
+        .bg-info {
+            background-color: #026bfb !important;
+        }
+
+        .bg-warning {
+            background-color: #f6be26 !important;
+        }
+
+        .bg-success {
+            background-color: #39d884 !important;
+        }
+
+        .bg-danger {
+            background-color: #e6604a !important;
+        }
+
+        .bg-black {
+            background-color: #000;
+        }
+
+        .bg-black-2,
+        .bonus-info {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .bg-black-5 {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .bg-black-7 {
+            background-color: rgba(0, 0, 0, 0.07);
+        }
+
+        .bg-black-10 {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .bg-black-14 {
+            background-color: rgba(0, 0, 0, 0.14);
+        }
+
+        .bg-black-22 {
+            background-color: rgba(0, 0, 0, 0.22);
+        }
+
+        .bg-white {
+            background-color: #fff;
+        }
+
+        .bg-white-2 {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .bg-white-5 {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .bg-white-7 {
+            background-color: rgba(255, 255, 255, 0.07);
+        }
+
+        .bg-white-10 {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .bg-white-14 {
+            background-color: rgba(255, 255, 255, 0.14);
+        }
+
+        .bg-white-22 {
+            background-color: rgba(255, 255, 255, 0.22);
+        }
+
+        .bg-theme {
+            background-color: #0b0c22 !important;
+        }
+
+        .bg-theme.current {
+            background-color: rgba(11, 12, 34, 0.7) !important;
+        }
+
+        .bg-theme-alt {
+            background-color: #10122d !important;
+        }
+
+        .bg-theme-alt.current {
+            background-color: #171a40 !important;
+        }
+
+        .bg-theme-grad {
+            background-image: linear-gradient(to right, #0b0c22 0%, #10122d 100%) !important;
+        }
+
+        .bg-theme-grad-alt {
+            background-image: linear-gradient(to right, #10122d 0%, #0b0c22 100%) !important;
+        }
+
+        .bg-theme-grad-s2 {
+            background-image: linear-gradient(135deg, #0b0c22 0%, #10122d 100%) !important;
+        }
+
+        .bg-theme-grad-s2-alt {
+            background-image: linear-gradient(135deg, #10122d 0%, #0b0c22 100%) !important;
+        }
+
+        .bg-theme-grad-alternet {
+            background-image: linear-gradient(to right, #46bdf4 0%, #7a0fff 100%) !important;
+        }
+
+        .bg-theme-dark {
+            background-color: #08091b !important;
+        }
+
+        .bg-theme-dark.current {
+            background-color: rgba(8, 9, 27, 0.7) !important;
+        }
+
+        .bg-theme-dark-alt {
+            background-color: #0b0c22 !important;
+        }
+
+        .bg-theme-dark-alt.current {
+            background-color: rgba(11, 12, 34, 0.7) !important;
+        }
+
+        .bg-theme-light {
+            background-color: #eff6ff !important;
+        }
+
+        .bg-theme-light.current {
+            background-color: rgba(239, 246, 255, 0.7) !important;
+        }
+
+        .bg-theme-light-alt {
+            background-color: #dfeaf9 !important;
+        }
+
+        .bg-theme-light-alt.current {
+            background-color: rgba(223, 234, 249, 0.7) !important;
+        }
+
+        .bg-theme-accent {
+            background-color: #46bdf4 !important;
+        }
+
+        .bg-theme-accent.current {
+            background-color: rgba(70, 189, 244, 0.7) !important;
+        }
+
+        .bg-theme-accent-alt {
+            background-color: #2b56f5 !important;
+        }
+
+        .bg-theme-accent-alt.current {
+            background-color: rgba(43, 86, 245, 0.7) !important;
+        }
+
+        .bg-blend:before {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #0b0c22);
+        }
+
+        .bg-blend-alt:before {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #10122d);
+        }
+
+        .bg-blend-light {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #eff6ff);
+        }
+
+        .bg-blend-light-alt {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #dfeaf9);
+        }
+
+        .bg-rblend-light {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #eff6ff);
+        }
+
+        .bg-rblend-light-alt {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #dfeaf9);
+        }
+
+        .theme-dark {
+            background: #08091b !important;
+        }
+
+        .text-primary {
+            color: #0b0c22 !important;
+        }
+
+        .text-primary-alt {
+            color: #10122d !important;
+        }
+
+        .text-theme-alt {
+            color: #7a0fff;
+        }
+
+        .text-base {
+            color: #12183a;
+        }
+
+
+
+
+
+        .counter {
+            margin: -15px 0 30px;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .has-fixed .header-main {
+            top: 0;
+        }
+
+        #ant-modal {
+            z-index: 100000;
+            position: absolute;
+        }
+
+        #root {
+            position: relative;
+            padding-bottom: 50px;
+        }
+
+        #root .btn.btn-md {
+            font-size: 18px !important;
+            padding: 15px 45px !important;
+            white-space: break-spaces;
+        }
+
+        #root .btn.btn-md[disabled] {
+            font-size: 12px !important;
+            max-width: 80%;
+            overflow: hidden;
+        }
+
+        .ant-layout {
+            background: transparent;
+        }
+
+        .ant-layout-header {
+            background: transparent !important;
+        }
+
+        #root main {
+            background: transparent !important;
+            padding: 0 !important;
+            text-align: center;
+        }
+
+        .App-Bar {
+            height: auto !important;
+            padding-top: 0 !important;
+            position: absolute !important;
+            bottom: 0 !important;
+            height: 40px !important;
+            padding: 0 !important;
+            top: auto !important;
+        }
+
+        .App-Bar-right>.ant-btn.ant-btn-primary.ant-btn-lg {
+            background: transparent !important;
+            border: none !important;
+            font-size: 14px !important;
+            box-shadow: none !important;
+        }
+
+        .ant-btn>span {
+            vertical-align: middle;
+        }
+
+        .App-Bar-right {
+            margin: 0 auto;
+        }
+
+        #root main .ant-btn-primary {
+            margin: 0 auto;
+            display: block;
+            white-space: break-spaces;
+            height: auto;
+        }
+
+        .modal-header {
+            background: #1a2029;
+            border-bottom: 0;
+        }
+
+        .modal-header .modal-title {
+            margin: 0 auto;
+            color: #FFF;
+        }
+
+        .ant-select-dropdown {
+            z-index: 100000 !important;
+        }
+
+        .header-navbar-s1 .menu>.menu-item>a {
+            padding: 20px 15px !important;
+            font-size: 14px !important;
+        }
+
+
+
+        #root main .counter {
+            color: #FFF;
+            display: none;
+        }
+
+        .eapps-social-share-buttons {
+            position: fixed !important;
+            z-index: 100 !important;
+        }
+
+        #root .buy,
+        #root .text,
+        #root #nova,
+        #root .app-title {
+            display: none !important;
+        }
+
+        #mint-box.not-connected #root {
+            padding-bottom: 15px;
+        }
+
+        #mint-box.not-connected .App-Bar {
+            display: none;
+        }
+
+        #mint-guide {
+            display: none;
+        }
+
+        #mint-box.not-connected #mint-guide {
+            display: block;
+        }
+
+        #modal-mint-guide .modal-body {
+            background: rgb(18, 8, 29);
+            background: linear-gradient(333deg, rgba(18, 8, 29, 1) 0%, rgba(15, 3, 59, 1) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media only screen and (max-width: 768px) {
+            #modal-mint-guide h5 {
+                font-size: 16px;
+            }
+
+            #modal-mint-guide .circle {
+                width: 48px;
+                float: left;
+                margin-bottom: 15px;
+            }
+
+            #iframe-widget-wrapper {
+                height: 390px !important;
+            }
+        }
+
+        .circle {
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+            width: 100%;
+            position: relative;
+            background-color: #FFF;
+        }
+
+        .circle:before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .circle-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .score-text {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1em;
+            line-height: 1em;
+            font-size: 32px;
+        }
+
+        #live-mint-feed {
+            white-space: nowrap;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            height: 300px;
+        }
+
+        #live-mint-feed .slide {
+            width: 200px;
+            display: inline-block;
+            text-align: center;
+            margin-right: 15px;
+        }
+
+        #live-mint-feed .slide .image {
+            display: block;
+            width: 100%;
+            background: #eaf3fc url('https://novalaunch.art/nova/loading.gif') no-repeat center center;
+            display: block;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-block: 15px;
+            position: relative;
+            box-shadow: 0 3px 8px 0 rgb(0 0 0 / 15%);
+        }
+
+        #live-mint-feed .slide .image:after {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        #live-mint-feed .slide img {
+            max-width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        #live-mint-feed .slide .name {
+            font-size: 18px;
+        }
+
+        #live-mint-feed .slide .minted {
+            display: block;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body class="nk-body body-wider theme-dark mode-onepage">
+    <div class="nk-wrap">
+        <header class="nk-header page-header is-transparent is-sticky is-shrink is-dark" id="header">
+
+            <div class="header-main">
+                <div class="header-container container">
+                    <div class="header-wrap">
+
+                        <div class="header-logo logo">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/cool.png"
+                                    alt="logo">
+                                <img class="logo-light" src="images/cool.png"
+                                    alt="logo">
+                            </a>
+                        </div>
+
+                        <div class="header-nav-toggle">
+                            <a href="#" class="navbar-toggle" data-menu-toggle="example-menu-04">
+                                <div class="toggle-line">
+                                    <span></span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="header-navbar header-navbar-s1">
+                            <nav class="header-menu" id="example-menu-04">
+                                <ul class="menu menu-s2">
+                                    <li class="menu-item"><a class="menu-link nav-link" href="/#">Home</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="/#about">About</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="/#roadmap">Roadmap</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="/#team">Team</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="/#faq">FAQ</a></li>
+                                    <li class="menu-item"><a target="_blank" href="https://www.discord.gg/XEmkFqwYNH"><em
+                                        class="social icon fab fa-discord"></em></a></li>
+                                    <li class="menu-item"><a target="_blank" href="https://www.twitter.com/Tirtha_NFT"><em
+                                        class="social icon fab fa-twitter"></em></a></li>
+                                    <li class="menu-item"><a target="_blank" href="https://www.instagram.com/Tirtha_NFT"><em
+                                        class="social icon fab fa-instagram"></em></a></li>
+
+                                            
+                                </ul>
+                                <ul class="menu-btns">
+                                    <li><a href="/" onclick="window.scrollTo(0, 0); return false;"
+                                            class="btn btn-rg btn-auto btn-outline btn-grad on-bg-theme btn-round"><span>Coming Soon</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-banner bg-theme-dark" id="home">
+                <div class="nk-banner">
+                    <div class="banner banner-mask-fix banner-fs banner-single tc-light">
+                        <div class="banner-wrap ov-v">
+                            <div class="container">
+                                <div
+                                    class="row align-items-center justify-content-center justify-content-lg-between gutter-vr-30px">
+                                    <div class="col-lg-6">
+                                        <div class="banner-caption wide-auto text-center text-lg-left">
+                                            <div class="cpn-head mt-0">
+                                                <h1 class="title title-xl-2">Crazy Cows</h1>
+                                            </div>
+                                            <div class="cpn-text cpn-text-s1">
+                                                <p class="lead">8888 algorithmically generated pixel art cows stuck in the Ethereum blockchain.</p>
+                                            </div>
+                                            <div id="mint-box" class="cpn-btns">
+                                                <div class="token-status token-status-s5 bg-theme-alt round no-bd"
+                                                    style="overflow: hidden;">
+                                                    <h5 style="margin-bottom: 30px;">Crazy Cows - 0.07 ETH Presale - 0.1 ETH Public Sale</h5>
+                                                    <div id="root"></div>
+                                                    <div id="mint-guide">
+                                                        <a data-toggle="modal" data-target="#modal-mint-guide" href="#"
+                                                            class="">Minting on the <img alt=""
+                                                                src="images/solana-sol-logo.svg"
+                                                                style="width: 20px;display: inline-block;" /> Solana
+                                                            Network - Learn How to Mint</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cpn-social">
+                                                <ul class="social">
+                                                    
+                                                    <li><a target="_blank" href="https://discord.gg/XEmkFqwYNH"><em
+                                                                class="social-icon fab fa-discord"></em></a></li>
+                                                    <li><a target="_blank" href="https://www.twitter.com/Tirtha_NFT"><em
+                                                                class="social-icon fab fa-twitter"></em></a></li>
+                                                    <li><a target="_blank" href="https://www.instagram.com/Tirtha_NFT"><em
+                                                                class="social-icon fab fa-instagram"></em></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-sm-9">
+                                        <div class="token-status token-status-s5 bg-transparent no-bd">
+                                            <img src="images/New Cow.gif" alt=""
+                                                style="max-width: 100%; border-radius: 5px;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nk-ovm mask-c-dark shape-v mask-contain-bottom"></div>
+            </div>
+
+        </header>
+        <main class="nk-pages">
+            <section id="about" class="section bg-white py-0 ov-h"
+                style="padding-top: 50px !important; padding-bottom: 50px !important;">
+                <div class="container">
+
+                    <div class="nk-block nk-block-features-2">
+                        <div
+                            class="row align-items-center gutter-vr-30px justify-content-center justify-content-md-between">
+                            <div class="col-mb-9 col-sm-7 col-md-6 col-lg-5">
+                                <div class="gfx py-4">
+                                    <img src="images/CC.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-10 col-md-6 text-center text-md-left">
+
+                                <div class="nk-block-text">
+                                    <h4 class="title title-lg">About Crazy Cows</h4>
+                                    <style> p{color:black;}</style>
+                                    <p class="p1"
+                                        style="margin-right: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: normal;"
+                                        helvetica="" neue";="" color:="" rgb(0,="" 0,="" 0);"="">A collection of 8888
+                                        algorithmically created pixel art cows that sweep floors and produce milk. This collection is made by a 10 year old boy named Tirtha Biswas. Our collection is
+                                        based on the idea of a community fund that would be used to buy Blue Chip NFTs
+                                        or Sweep floors of new collections. All decisions of how the money is used in
+                                        the community fund are made by holders of Crazy Cows.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="section section-tokensale tc-light bg-theme" id="economics">
+
+                <div class="container">
+                    <div class="section-head text-center wide-auto-sm">
+                        <h2 class="title title-s4" title="Economics of CrazyCows">Economics of Crazy Cows</h2>
+                        <p class="p1"
+                            style="margin-right: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 13px; line-height: normal;"><br></p>
+                    </div>
+                    <div class="nk-block nk-block-token mgb-m30">
+                        <div class="row align-items-center justify-content-between gutter-vr-50px">
+                            <div class="col-lg-8">
+                                <div class="row gutter-vr-30px">
+                                    <div class="col-sm-4">
+                                        <div class="stage-info">
+                                            <h6 class="title title-s6 title-xs-s2">Minting Begins</h6>
+                                            <p>
+                                                Jan 08 2021 11:59:25 GMT<br />
+                                            </p>
+                                            
+                                            <a rel="nofollow" class="btn btn-sm btn-grad btn-round"
+                                                href="https://savvytime.com/converter/gmt/sep-25-2021jan-8-2021/11-59am" style="color: white;"> Convert
+                                                to your time</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="stage-info">
+                                            <h6 class="title title-s6 title-xs-s2">Total Mints</h6>
+                                            <h2>8,888</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="stage-info">
+                                            <h6 class="title title-s6 title-xs-s2">Price per Mint</h6>
+                                            <h2>0.07-0.1 ETH</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="token-status token-status-s5 bg-theme-alt round no-bd">
+                                    <h6>Keep up with our launch updates</h6>
+                                    <br />
+                                    <ul class="social pdb-m justify-content-center">
+                                        <li><a target="_blank" href="https://discord.gg/XEmkFqwYNH"><em
+                                                    class="social-icon fab fa-discord"></em></a></li>
+                                        <li><a target="_blank" href="https://www.twitter.com/Tirtha_NFT"><em
+                                                    class="social-icon fab fa-twitter"></em></a></li>
+                                        <li><a target="_blank" href="https://www.instagram.com/Tirtha_NFT"><em
+                                                    class="social-icon fab fa-instagram"></em></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-roadmap bg-theme tc-light" id="roadmap">
+                <div class="container">
+
+                    <div class="section-head text-center wide-auto">
+                        <h2 class="title title-lg title-dark">Roadmap 1.0</h2>
+                        <p class="lead">The future of the Cows.</p>
+                    </div>
+                    <div class="nk-block nk-block-roadmap">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-10">
+                                <div class="roadmap-wrap">
+                                    <div class="roadmap-line"></div>
+                                    <div class="roadmap roadmap-right ">
+                                        <div class="roadmap-step">
+                                            <div class="roadmap-head">
+                                                <span class="roadmap-time">February 8th 2022</span>
+                                                <span class="roadmap-title">Presale Mint</span>
+                                            </div>
+                                            <p>600 of the most engaged members of the community have the opportunity to
+                                                mint a max of 3 CrazyCowss per person in the presale period. </p>
+                                        </div>
+                                    </div>
+                                    <div class="roadmap roadmap-left ">
+                                        <div class="roadmap-step">
+                                            <div class="roadmap-head">
+                                                <span class="roadmap-time">February 8th 2022</span>
+                                                <span class="roadmap-title">Public Mint</span>
+                                            </div>
+                                            <p>The ascension will commence. Public Mint is live and all members of the
+                                                CrazyCowss are established. </p>
+                                        </div>
+                                    </div>
+                                    <div class="roadmap roadmap-right ">
+                                        <div class="roadmap-step">
+                                            <div class="roadmap-head">
+                                                <span class="roadmap-time">February 9th 2022</span>
+                                                <span class="roadmap-title">Reveal / Creation of Community Fund</span>
+                                            </div>
+                                            <p>24 hours after Public Mint has taken place all CrazyCowss will be revealed
+                                                to the world. After the reveal has occurred 50% of the total mint amount
+                                                will be transferred to a multi-sig wallet this is the creation of the
+                                                Community Fund. (Find more info on the Community Fund in the discord)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="roadmap roadmap-left ">
+                                        <div class="roadmap-step">
+                                            <div class="roadmap-head">
+                                                <span class="roadmap-time">10th February - 17th February 2022</span>
+                                                <span class="roadmap-title">Maintenance (If needed)</span>
+                                            </div>
+                                            <p>This period will be used to solve any issues that may have had an effect
+                                                on the NFTs as well as set up holder roles in the discord to establish
+                                                the beginning period. If there are no issues then as soon as holders
+                                                roles are active will commence the Beginning...</p>
+                                        </div>
+                                    </div>
+                                    <div class="roadmap roadmap-right ">
+                                        <div class="roadmap-step">
+                                            <div class="roadmap-head">
+                                                <span class="roadmap-time">17th February 2022 (Can be pushed
+                                                    earlier)</span>
+                                                <span class="roadmap-title">The Beginning</span>
+                                            </div>
+                                            <p>The first Holder Vote will take place. We have begun our journey to the
+                                                moon 🚀.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="section bg-theme tc-light ov-h" id="team">
+                <div class="container">
+                    <div class="section-head section-head-sm text-center wide-auto-sm">
+                        <h2 class="title title-s4" title="Our Team">Our Team</h2>
+                        <p class="lead">
+                            <font color="#ffffff">The Cows behind the project.</font>
+                            
+                        </p>
+                        <p class="lead"><br></p>
+                    </div>
+
+                    <div class="nk-block nk-block-team-list team-list">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt">
+                                    <div class="team-photo  team-photo-bg">
+                                        <img src="images/Team Members/Tirtha Biswas.png" alt=""
+                                            >
+                                    </div>
+                                    
+                                    <h5 class="team-name title title-sm">Tirtha Biswas</h5>
+                                    <span class="team-position">Founder</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt">
+                                    <div class="team-photo team-photo-bg">
+                                        <img src="images/Team Members/TBMath.png" alt=""
+                                           >
+                                    </div>
+                                   
+                                    <h5 class="team-name title title-sm">TBMath</h5>
+                                    <span class="team-position">Artist</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt">
+                                    <div class="team-photo  team-photo-bg">
+                                        <img src="images/Team Members/Pi Labs.png" alt=""
+                                            >
+                                    </div>
+                                    
+                                    <h5 class="team-name title title-sm">Pi Labs</h5>
+                                    <span class="team-position">Developers</span>
+                            </div>
+                     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section bg-white pb-0" id="faq">
+                <div class="container">
+                    <div class="section-head text-center wide-auto-sm">
+                        <h2 class="title title-s4" title="FAQS">Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="nk-block">
+                        <div class="row justify-content-center" style="margin-bottom: 100px;">
+                            <div class="col-xl-8 col-lg-10">
+                                <ul class="nav tab-nav tab-nav-line mgb-r">
+                                    <li><a class="active" data-toggle="tab" href="#about-project">About this Project</a>
+                                    </li>
+                                    <li><a data-toggle="tab" href="#about-nfts">About NFTs</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="about-project">
+                                        <div class="accordion accordion-faq" id="faq-content">
+                                            <div class="accordion-item accordion-item-s4 bg-light">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#faq-content-0">
+                                                    Why are our mint prices what they are? <span
+                                                        class="accordion-icon accordion-icon-s2"></span>
+                                                       
+                                                </h5>
+                                                <div id="faq-content-0" class="collapse" data-parent="#faq-content">
+                                                    <div class="accordion-content">
+                                                        <p>The reason for our mint prices is to gain larger capital for
+                                                            our fund.</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#faq-content-1">
+                                                    How do I join the Crazy Cows? <span
+                                                        class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-content-1" class="collapse" data-parent="#faq-content">
+                                                    <div class="accordion-content">
+                                                        <span style="color: rgb(48, 64, 115);">On release, the Mint
+                                                            function will take you to a standalone page where you can
+                                                            connect your wallet and purchase a CrazyCows NFT. We are
+                                                            structuring our distribution to be as fair as possible, with
+                                                            live minting & instant distribution. Please note that – if
+                                                            the Solana blockchain gets clogged – it could take a while
+                                                            to receive your NFT.</span><br>
+                                                    </div>
+                                                </div>
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#faq-content-2">
+                                                    How were the Crazy Cows created? <span
+                                                        class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-content-2" class="collapse" data-parent="#faq-content">
+                                                    <div class="accordion-content">
+                                                        <p style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding: 0px 0px 1em; border: 0px; outline: 0px; text-size-adjust: 100%; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"
+                                                            gilroy="" medium",="" helvetica,="" arial,="" lucida,=""
+                                                            sans-serif;"="">6636&nbsp;CrazyCows NFTs are randomly generated
+                                                            from a collection of attributes created by our artist. All
+                                                            attributes are hand-drawn. CrazyCowss are minted using
+                                                            Metaplex. (currently, the standard protocol used on Solana
+                                                            for minting NFTs.) Each NFT is unique and non-fungible this
+                                                            means they have only one account holder &amp; are
+                                                            cryptographically signed.</p>
+                                                        <p style="margin-right: 0px; margin-left: 0px; padding: 0px; border: 0px; outline: 0px; text-size-adjust: 100%; vertical-align: baseline; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"
+                                                            gilroy="" medium",="" helvetica,="" arial,="" lucida,=""
+                                                            sans-serif;"="">30 CrazyCowss have been individually and
+                                                            carefully crafted as 1 of 1s. Look out for these they are
+                                                            really rare 👀</p>
+                                                    </div>
+                                                </div>
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#faq-content-3">
+                                                    WAGMI? <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-content-3" class="collapse" data-parent="#faq-content">
+                                                    <div class="accordion-content">
+                                                        <p>Indeed indeed.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="about-nfts">
+                                        <div class="accordion accordion-faq" id="faq-68">
+                                            <div class="accordion-item accordion-item-s4 bg-light">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#faq-68-1">
+                                                    What is an NFT?
+                                                    <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-68-1" class="collapse show" data-parent="#faq-68">
+                                                    <div class="accordion-content">
+                                                        <p>Non-Fungible Tokens are unique, easily verifiable digital
+                                                            assets that can represent items such as GIFs, images,
+                                                            videos, music albums, and more. Anything that exists online
+                                                            can be purchased as an NFT, theoretically.</p>
+                                                        <p>NFTs are different from cryptocurrencies because they’re not
+                                                            interchangeable. Think of Pokémon cards: You can trade them,
+                                                            but a Gastly is not the same as a holographic Charizard. But
+                                                            a bitcoin is indistinguishable from another bitcoin.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-light">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#faq-68-2">
+                                                    Why would I want to own an NFT? Can I make money on it?
+                                                    <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-68-2" class="collapse" data-parent="#faq-68">
+                                                    <div class="accordion-content">
+                                                        <p>One reason to buy an NFT is for its emotional value, which
+                                                            isn’t so different from physical objects...unless you’re a
+                                                            total utilitarian. No one buys lip gloss because they need
+                                                            it. They buy it for the way it makes them feel. The same can
+                                                            be true for a GIF, image, video, or other digital asset.</p>
+                                                        <p>The other reason is because you think it’s valuable...and
+                                                            will only increase in value. And yes, you can make money off
+                                                            of an NFT by buying and reselling it for more.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-light">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#faq-68-3">
+                                                    How do you know your NFT is authentic?
+                                                    <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-68-3" class="collapse" data-parent="#faq-68">
+                                                    <div class="accordion-content">
+                                                        <p>NFT ownership is recorded on the blockchain, and that entry
+                                                            acts as a digital pink slip. Our NFTs will be encoded using
+                                                            Metaplex's smart contract on the Solana Blockchain.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-light">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#faq-68-4">
+                                                    Which wallets will I be able to use to mint an NFT?
+                                                    <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-68-4" class="collapse" data-parent="#faq-68">
+                                                    <div class="accordion-content">
+                                                        <p>We offer a number of wallet connections for minting, but
+                                                            Phantom is the recommended wallet.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-light">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#faq-68-5">
+                                                    How can you ensure distribution of mints is random?
+                                                    <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-68-5" class="collapse" data-parent="#faq-68">
+                                                    <div class="accordion-content">
+                                                        <p>We will be using a smart contract deployed on the Solana
+                                                            chain to distribute the Crazy Cows. The tokens can be verified
+                                                            on the blockchain and our smart contract code can be audited
+                                                            by the Solana core devs.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="modal fade" id="modal-mint-guide">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><em
+                            class="ti ti-close"></em></a>
+                    <div class="modal-body p-md-4 p-lg-5">
+                        <h3 style="text-align: center; color: #FFF;">Minting on the <img alt=""
+                                src="images/solana-sol-logo.svg"
+                                style="width: 32px;display: inline-block;vertical-align: middle;position: relative;top: -2px;margin: 0 5px;" />
+                            Solana Network</h3>
+                        <div class="row align-items-center" style="margin: 30px 0;">
+                            <div class="col-md-2 col-12">
+                                <div class="circle">
+                                    <div class="circle-inner">
+                                        <div class="score-text">1</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-12">
+                                <h5 style="color: #FFF; line-height: 200%;"><strong style="font-weight: 900;">Get a
+                                        Solana Wallet</strong> - It's free, easy, and takes seconds. We recommend using
+                                    <a href="https://phantom.app/" target="_blank" style="color: #FFF;"><img
+                                            src="https://phantom.app/img/phantom-logo.svg"
+                                            style="width: 120px;display: inline-block;vertical-align: middle;margin: -5px 5px 0 5px;"
+                                            alt="" /> wallet</a></h5>
+                                <a href="https://phantom.app/" target="_blank" class="btn btn-grad btn-lg">Install
+                                    Phantom Wallet</a>
+                            </div>
+                        </div>
+                        <div class="row align-items-center" style="margin: 30px 0;">
+                            <div class="col-md-2 col-12">
+                                <div class="circle">
+                                    <div class="circle-inner">
+                                        <div class="score-text">2</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-12">
+                                <h5 style="color: #FFF; line-height: 200%;"><strong style="font-weight: 900;">Fund your
+                                        Solana Wallet</strong> - You can buy SOL on many popular exchanges, or easily
+                                    exchange for it:</h5>
+                                <div id="iframe-widget-wrapper" style="height: 355px">
+                                    <iframe id='iframe-widget'
+                                        src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=0.1&from=eth&horizontal=true&lang=en-US&link_id=e9dcd51d802f9c&locales=true&logo=false&to=sol'
+                                        style="height: 455px; width: 100%; border: none"></iframe>
+                                    <script defer type='text/javascript'
+                                        src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
+                                </div>
+                                <p style="color: #FFF;">Just put your Solana wallet address above to swap for SOL.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center" style="margin: 30px 0;">
+                            <div class="col-md-2 col-12">
+                                <div class="circle">
+                                    <div class="circle-inner">
+                                        <div class="score-text">3</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-12">
+                                <h5 style="color: #FFF; line-height: 200%;"><strong style="font-weight: 900;">Mint
+                                        Away</strong> - Click "Connect Wallet" when the mint is opened, then click "Mint
+                                    Now". You will be prompted to approve the transaction - after approval, your NFT
+                                    will show up in your wallet in seconds!</h5>
+                                <p style="color:#FFF;">Just like that, you're all set & able to mint an NFT on the
+                                    fastest & lowest cost blockchain.</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <p style="text-align: center;"><a href="#" class="btn btn-muted"
+                                onclick="$('#modal-mint-guide').modal('hide'); return false;">Got it! Close this</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class=" bg-theme-alt section-connect">
+            <div class="section  pb-0 tc-light ov-h">
+                <div>
+
+                    <div>
+                        <div class="text-center">
+                            <div>
+                                <div class="pdb-r">
+                                    
+                                    <h4>Stay up to date with our project</h4>
+                                </div>
+                                <p>Join us on our communities.</p>
+                                <p class="p1"
+                                    style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: normal;">
+                                    <span class="s1">
+                                        <a href="https://www.discord.gg/XEmkFqwYNH"target="_blank">https://www.discord.gg/XEmkFqwYNH</a></span></p>
+                                <p class="p1"
+                                    style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: normal;">
+                                    <span class="s1"><a href="https://www.twitter.com/Tirtha_NFT"
+                                            target="_blank">https://www.twitter.com/Tirtha_NFT</a></span></p>
+                                <p class="p1"
+                                    style="margin-right: 0px; margin-left: 0px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: normal;">
+                                    <span class="s1"><a href="https://www.instagram.com/crazycowsnft/"
+                                            target="_blank">https://www.instagram.com/crazycowsnft/</a></span></p>
+
+                                <p> </p>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nk-ovm shape-contain shape-center-top shape-p"></div>
+            </div>
+            <div class="section section-footer section-s tc-light bg-transparent">
+                <div class="container">
+
+                    <div class="nk-block block-footer">
+                        <div class="row">
+                            <div class="col">
+                                <div class="wgs wgs-text text-center mb-3">
+                                    <ul class="social pdb-m justify-content-center">
+                                        <li><a target="_blank" href="https://www.discord.gg/XEmkFqwYNH"><em
+                                                    class="social-icon fab fa-discord"></em></a></li>
+                                        <li><a target="_blank" href="https://www.twitter.com/Tirtha_NFT"><em
+                                                    class="social-icon fab fa-twitter"></em></a></li>
+                                        <li><a target="_blank" href="https://www.instagram.com/crazycowsnft"><em
+                                                    class="social-icon fab fa-instagram"></em></a></li>
+                                        
+                                    </ul>
+                                    <div class="copyright-text copyright-text-s3 pdt-m">
+                                        <p><span class="d-sm-block">Copyright &copy; 2021, Crazy Cows. </span>All
+                                            trademarks and copyrights belong to their respective owners.</p>
+                                        
+                                        
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="mint-script.js" type="text/javascript"></script>
+
+    <script src="assets/js/jquery.bundle.js?ver=1930"></script>
+    <script src="assets/js/scripts.js?ver=1930"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+    <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
+    <style>
+        .css-x1khsl {
+            background: #000 url('https://ucarecdn.com/4ce4c541-4a89-49bf-a2f2-d965cf08a59b/') no-repeat center center;
+            background-size: contain;
+            border: none;
+            color: transparent;
+        }
+    </style>
+    <script type="text/javascript">
+        const beamsClient = new PusherPushNotifications.Client({
+            instanceId: 'd368f0a5-4d7d-4338-8e04-944189064bd2',
+        });
+
+        beamsClient.start()
+            .then(() => beamsClient.addDeviceInterest('CrazyCows.art'))
+            .then(() => console.log('Successfully registered and subscribed!'))
+            .catch(console.error);
+
+
+        function animateCount(n, i, e, t) { let a = null; Date.now(); const o = m => { a || (a = m); const r = Math.min((m - a) / t, 1); n.innerHTML = Math.floor(r * (e - i) + i), r < 1 ? window.requestAnimationFrame(o) : window.cancelAnimationFrame(window.requestAnimationFrame(o)) }; window.requestAnimationFrame(o) }
+
+        $(document).ready(function () {
+
+
+
+
+            var checkExist_mint = setInterval(function () {
+                if ($('main.ant-layout-content').length) {
+                    $('main.ant-layout-content .ant-btn').attr('class', 'btn btn-md btn-grad btn-round');
+                }
+            }, 100);
+
+            var checkExist = setInterval(function () {
+                if ($('.ant-modal-root').length) {
+                    $('.ant-modal-root').parent().attr('id', 'ant-modal');
+                    clearInterval(checkExist);
+                }
+            }, 100);
+
+            var checkExist_popup = setInterval(function () {
+                if ($('.ant-popover').length) {
+                    $('.ant-popover').parent().parent().attr('id', 'ant-modal');
+                    clearInterval(checkExist_popup);
+                }
+            }, 100);
+        });
+
+        //var i = document.createElement("img");
+        //i.src = "https://novalaunch.art/metrics?project=CrazyCows";
+    </script>
+</body>
+
+</html>
